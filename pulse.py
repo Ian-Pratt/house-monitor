@@ -166,6 +166,7 @@ while True :
     time.sleep(pulseInterval)
     if actual % 1000 == 0 :
         print(actual, countx, err )
+test
 """
 
 
