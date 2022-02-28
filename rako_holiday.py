@@ -20,6 +20,8 @@ routing_key = 'R03DGSERQAG8S08Y18MMNQ8WSP33ND5H'
 
 path = "/var/opt/data/"
 
+hidden_rooms = { 0 : "Master_Control", 50 : "Front_Porch_PIR", 52 : "Alarm_Interface" }
+
 global xrooms
 
 def get_room_names():
@@ -33,7 +35,8 @@ def get_room_names():
 
     dict=xmltodict.parse(xml)
 
-    xrooms={}
+    xrooms=hidden_rooms
+
     lstRoom_num = []
     for room in dict['rako']['rooms']['Room'] :
         if room['@id'] == '0':
@@ -57,7 +60,7 @@ def new_file():
     tmp = log_file
     d=datetime.datetime.utcnow()
     name = path + "rako-%s.log"%d.replace(tzinfo=datetime.timezone.utc).astimezone().isoformat(timespec='seconds')
-    log_file = open(name,"w+")
+    log_file = open(name,"w+", 1) # line bufferd
     if tmp:
         tmp.close()     
 

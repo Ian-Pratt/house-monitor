@@ -96,7 +96,7 @@ def water_edge ( ignore ) :
 
     diff = (d-wlast).total_seconds()
     wlast = d
-    time.sleep(0.02) 
+    time.sleep(0.050) 
     wstate=GPIO.input(water_pin)
     if wstate == 0:
         wcount = wcount + 9
@@ -129,7 +129,7 @@ newfile(-1)
 GPIO.add_event_detect(elec_pin, GPIO.FALLING, callback=countinc)
 
 wstate = GPIO.input(water_pin)
-GPIO.add_event_detect(water_pin, GPIO.BOTH, callback=water_edge, bouncetime=20)
+GPIO.add_event_detect(water_pin, GPIO.BOTH, callback=water_edge, bouncetime=100)
 #GPIO.add_event_detect(water_pin, GPIO.RISING, callback=water_rising)
 
 #schedule.every().minute.at(":17").do(newfile)
