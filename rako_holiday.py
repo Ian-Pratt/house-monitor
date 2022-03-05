@@ -4,7 +4,7 @@ import socket
 import random
 import http.client
 import datetime
-#import ephem
+import ephem
 import time
 import pdpyras
 import schedule
@@ -45,7 +45,7 @@ def get_room_names():
 
         #print(room)
 
-        print(room['@id'],room_name)
+        print("%02d %s" % (int(room['@id']),room_name) )
 
         lstRoom_num.append(int(room['@id']))
 
@@ -64,17 +64,26 @@ def new_file():
     if tmp:
         tmp.close()     
 
+obs = ephem.Observer()
+obs.lat = "52.2053"
+obs.long="0.1218"
+
+def get_sunrise_and_set():
+    global obs
+    global sunrise
+    global sunset 
+    obs.date= ("%s 12:00" % datetime.date.today() )
+    sunrise=obs.previous_rising(ephem.Sun()).datetime()
+    sunset =obs.next_setting(ephem.Sun()).datetime() 
+    t=datetime.datetime.utcnow()
+    T=t.replace(tzinfo=datetime.timezone.utc).astimezone().isoformat(timespec='seconds')
+    print( T, "ephem_calc", sunrise, sunset )
+
 def listening():
     soc = socket.socket(socket.AF_INET, socket.SOCK_DGRAM, 0)
     soc.bind((UDP_IP, PORT))
     soc.settimeout(1.0)
-
-    #obs = ephem.Observer()
-    #obs.lat = "52.2053"
-    #obs.long="0.1218"
-    #obs.date= ('2022/1/1 18:00')
-    #print( obs.previous_rising(ephem.Sun()).datetime(), obs.next_setting(ephem.Sun()).datetime() 
-               
+           
     global log_file 
         
     holdoff=0
@@ -82,18 +91,24 @@ def listening():
     log_session = pdpyras.ChangeEventsAPISession(routing_key)
     event_session = pdpyras.EventsAPISession(routing_key)
     resp = ''
-        
+    
+    global sunrise
+    global sunset
         
     while True:    
         try:
             data, addr = soc.recvfrom(1024)
         except socket.timeout:
+            schedule.run_pending()
+            t=datetime.datetime.utcnow()
+            T=t.replace(tzinfo=datetime.timezone.utc).astimezone().isoformat(timespec='seconds')
             if holdoff and t > holdoff:
                 print(T,"send_pagerduty_trigger")
                 event_key = event_session.trigger("Alarm is Sounding!", 'Elmhurst')
                 holdoff = 0
-            schedule.run_pending()
             continue
+        
+        schedule.run_pending()
 
         try: 
             #print("recieved message:", addr, len(data), data.hex())
@@ -116,7 +131,16 @@ def listening():
                             roomname = xrooms[room]
                         except:
                             roomname = "__"
-                        entry = "%s set_scene room=%d %s channel=%d command=%d value=%d" % (T, room, roomname,channel,command,val )
+
+
+                        risedelta=round(((t-sunrise).total_seconds())/60.0)
+                        setdelta=round(((t-sunset).total_seconds())/60.0)
+                        if ( abs(risedelta) < abs(setdelta) ):
+                            xdelta = "R%+04d" % risedelta
+                        else:
+                            xdelta = "S%+04d" % setdelta
+
+                        entry = "%s %s set_scene command=%02d room=%02d %s channel=%d scene=%d" % (T, xdelta, command, room, roomname,channel,val )
                         print(entry)
                         log_file.write( entry + "\n")
 
@@ -162,6 +186,10 @@ def listening():
 new_file()
 schedule.every().day.at("00:00").do(new_file)
 #schedule.every().minute.at(':00').do(new_file)
+
+get_sunrise_and_set()
+schedule.every().day.at("00:00").do(get_sunrise_and_set)
+
         
 while True:                
     try:
@@ -201,4 +229,3 @@ def set_scene( room, channel, scene):
 
 
 #set_scene( 23, 0, 1)
-
