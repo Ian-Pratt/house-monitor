@@ -117,64 +117,86 @@ def listening():
             t=datetime.datetime.utcnow()
             T=t.replace(tzinfo=datetime.timezone.utc).astimezone().isoformat(timespec='seconds')
 
-            if len(data) >=9 and data[0] == 0x53: # status report
+            if len(data) > 10 and data[0:10] == b'RAKOBRIDGE':
+                print(T,"rakobridge_dhcp", data)
+                continue
+
+            if len(data) <7 or data[1] + 2 != len(data):
+                print(T,"length_error", data)
+                continue
+
+            crc = 0
+            for b in data[2:]:
+                crc += b
+            if crc != 256:
+                print(T,"CRC_fail", data)
+                continue
+
+            ctype = data[0]
+            if ctype == 0x53: # status report
+                crc = 0
+                for b in data[2:]:
+                    crc += b
+                if crc != 256:
+                    print(T,"CRC_fail", data)
+                    continue
+
                 room = data[2] * 256 + data[3]
                 channel = data[4]
                 command= data[5]
-                val = data[7]
-                if command == 0x31: # set scene
-                    crc = 0
-                    for b in data[2:]:
-                        crc += b
-                    if crc == 256:
-                        try:
-                            roomname = xrooms[room]
-                        except:
-                            roomname = "__"
+
+                if ( len(data) == 9 or len(data) == 12) and command == 0x31: # set scene
+                    rate = data[6]
+                    val = data[7]
+                    try:
+                        roomname = xrooms[room]
+                    except:
+                        roomname = "__"
 
 
-                        risedelta=round(((t-sunrise).total_seconds())/60.0)
-                        setdelta=round(((t-sunset).total_seconds())/60.0)
-                        if ( abs(risedelta) < abs(setdelta) ):
-                            xdelta = "R%+04d" % risedelta
-                        else:
-                            xdelta = "S%+04d" % setdelta
-
-                        entry = "%s %s set_scene command=%02d room=%02d %s channel=%d scene=%d" % (T, xdelta, command, room, roomname,channel,val )
-                        print(entry)
-                        log_file.write( entry + "\n")
-
-                        if room == 52:  # alarm is room 52
-                            if val == 4:   # scene 4 is Alarm is Set
-                                print(T, "alarm_set")
-                                log_file.write( "%s alarm_set\n" % T ) 
-                                resp = log_session.submit("Alarm set", 'Elmhurst')
-
-                            elif val == 0:    # Alarm is unset
-                                if event_key:
-                                    event_session.resolve(event_key)
-                                    print(T, "resolve", event_key)
-                                    log_file.write( "%s alarm_resolve\n" % T )
-                                    event_key = ''
-                                    
-                                print(T, "alarm_unset")
-                                log_file.write( "%s alarm_unset\n" % T )
-                                resp = log_session.submit("Alarm unset", 'Elmhurst')
-                                holdoff = 0
-
-                            elif val == 1:    # Alarm sounding
-                                print(T, "alarm_sounding")
-                                log_file.write( "%s alarm_sounding\n" % T )
-                                holdoff = t + datetime.timedelta(seconds=alarm_delay)
-                            else:
-                                print(T,"alarm_unknown")
-                                log_file.write( "%s alarm_unknown\n" % T )
-
+                    risedelta=round(((t-sunrise).total_seconds())/60.0)
+                    setdelta=round(((t-sunset).total_seconds())/60.0)
+                    if ( abs(risedelta) < abs(setdelta) ):
+                        xdelta = "R%+04d" % risedelta
                     else:
-                        print(T,"CRC_fail", data)
-                else:
-                    print(T,"not_set_scene", command, len(data), data.hex())
+                        xdelta = "S%+04d" % setdelta
 
+                    entry = "%s %s set_scene command=%02d room=%02d %s channel=%d scene=%d" % (T, xdelta, command, room, roomname,channel,val )
+                    print(entry)
+                    log_file.write( entry + "\n")
+
+                    if room == 52:  # alarm is room 52
+                        if val == 4:   # scene 4 is Alarm is Set
+                            print(T, "alarm_set")
+                            log_file.write( "%s alarm_set\n" % T ) 
+                            resp = log_session.submit("Alarm set", 'Elmhurst')
+
+                        elif val == 0:    # Alarm is unset
+                            if event_key:
+                                event_session.resolve(event_key)
+                                print(T, "resolve", event_key)
+                                log_file.write( "%s alarm_resolve\n" % T )
+                                event_key = ''
+                                
+                            print(T, "alarm_unset")
+                            log_file.write( "%s alarm_unset\n" % T )
+                            resp = log_session.submit("Alarm unset", 'Elmhurst')
+                            holdoff = 0
+
+                        elif val == 1:    # Alarm sounding
+                            print(T, "alarm_sounding")
+                            log_file.write( "%s alarm_sounding\n" % T )
+                            holdff = t + datetime.timedelta(seconds=alarm_delay)
+                        else:
+                            print(T,"alarm_unknown")
+                            log_file.write( "%s alarm_unknown\n" % T )
+
+                elif len(data) == 7 and command == 0x0f:
+                    print(T,"fade_stop", command, room, channel)
+                elif len(data) == 8 and command == 0x32:
+                    print(T,"fade_start", command, room, channel)
+                else:
+                    print(T,"status_parse_err", len(data), data.hex())
             else:
                 print(T,"not_status_update", len(data), data.hex())
     
