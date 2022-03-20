@@ -9,7 +9,7 @@ import time
 import pdpyras
 import schedule
 
-alarm_delay = 10
+alarm_delay = 5
 
 UDP_IP = "0.0.0.0"
 BRIDGE_IP = '192.168.1.34'
@@ -161,7 +161,7 @@ def listening():
                     else:
                         xdelta = "S%+04d" % setdelta
 
-                    entry = "%s %s set_scene command=%02d room=%02d %s channel=%d scene=%d" % (T, xdelta, command, room, roomname,channel,val )
+                    entry = "%s set_scene %s command=%02d room=%02d %s channel=%d scene=%d" % (T, xdelta, command, room, roomname,channel,val )
                     print(entry)
                     log_file.write( entry + "\n")
 

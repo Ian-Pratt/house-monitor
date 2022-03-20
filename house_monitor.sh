@@ -19,5 +19,8 @@ PYTHONUNBUFFERED=1 /usr/bin/python3 /home/ian/house-monitor/rako_holiday.py &>> 
 #/usr/bin/python3 /home/ian/discord/send.py >> discord.out 2>> discord.err || logger discord fail &
 
 
+logger attention_button_server
+PYTHONUNBUFFERED=1 /usr/bin/python3 /home/ian/house-monitor/attention_button_server.py &>> attention_button.out || logger attention_button_server fail &
+
 
 
