@@ -14,8 +14,9 @@ while True:
             TCP_IP = "192.168.1.20"
             TCP_PORT = 8080
             s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-            s.settimeout(0.5)
+            s.settimeout(1)
 
+            global manage_to_send 
             manage_to_send = False
 
             try:
