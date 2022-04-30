@@ -2,6 +2,8 @@
 
 logger house_monitor
 
+source /home/ian/house-monitor/config
+
 cd /var/opt/data
 
 /usr/bin/python3 /home/ian/house-monitor/pulse.py &>> pulse.out || logger pulse fail &
