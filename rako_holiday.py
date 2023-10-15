@@ -29,7 +29,7 @@ hidden_rooms = {0: "Master_Control",
 non_interactive = hidden_rooms.keys() | {33: "Front_Entrance_Pillars", 32: "Gate_Lights",
                                          34: "Kitchen_External", 35: "Garden_Path", 36: "Garden_Flower_Beds"}.keys()
 
-warn_window = 120   # 180 min centered around sunset
+warn_window = 180   # 180 min centered around sunset
 
 
 def Now ():

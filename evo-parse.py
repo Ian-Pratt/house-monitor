@@ -106,6 +106,7 @@ rooms = {
 
 temps = {}
 setpoints = {}
+setpoints_rad = {}
 for i in rooms:
     temps[rooms[i]] = -1.0
     setpoints[rooms[i]] = -1.0
@@ -118,8 +119,8 @@ for line in sys.stdin:
     time = dict['time']
     cmd = dict['Command']
 
-    if cmd == "XXXXX1060": # due to bug no ids
-        continue
+    #if cmd == "1060": # due to bug no ids
+    #    continue
 
     ids = dict['ids']
     (id0,id1) = ids.split()
@@ -167,6 +168,8 @@ for line in sys.stdin:
             room = room.removesuffix('_EUF')
             if (not room in r_setpoints) or (circ_setpoints[c] > r_setpoints[room]):
                 r_setpoints[room] = circ_setpoints[c]
+            if c[-4:] == "_Rad":
+                setpoints_rad[c[:-4]] = circ_setpoints[c]
 
         for r in r_setpoints:
             setpoints[r] = r_setpoints[r]
@@ -187,7 +190,10 @@ for line in sys.stdin:
 
     print(time, "STATUS")
     for r in temps:
-        print("%15s %.1f %.1f" % (r, setpoints[r], temps[r]) )
+        print("%15s %.1f %.1f" % (r, temps[r], setpoints[r]),end='' )
+        if r in setpoints_rad:
+            print(" %.1f" % (setpoints_rad[r]),end='')
+        print()
     
     #for m in sorted(demand):
     #    print(m,demand[m],"  ",end='')
