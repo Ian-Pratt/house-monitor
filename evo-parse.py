@@ -2,6 +2,8 @@ import json
 import sys
 
 # sudo nohup stdbuf -oL rtl_433/build/src/rtl_433 -f 868M -R 185 -M level -F json -d0 | stdbuf -oL tee evo6.log | python3 -u ./evo-parse.py &> evo-parse6.log
+#  sudo LD_PRELOAD=/usr/lib/gcc/arm-linux-gnueabihf/10/libasan.so nohup rtl_433/build/src/rtl_433 -f 868M -R 185 -R 113 -M level -F json -d0 -v >evoZZ.log 2>&1 &
+
 
 csv = 1
 
