@@ -1,0 +1,191 @@
+2024-03-15T00:30:01+00:00 set_scene R-342 - command=49 room=32 Gate_Lights channel=0 scene=0
+2024-03-15T00:30:01+00:00 set_scene R-342 - command=49 room=33 Front_Entrance_Pillars channel=0 scene=0
+2024-03-15T00:30:02+00:00 set_scene R-342 - command=49 room=34 Kitchen_External channel=0 scene=0
+2024-03-15T00:30:02+00:00 set_scene R-342 - command=49 room=36 Garden_Flower_Beds channel=0 scene=0
+2024-03-15T00:37:16+00:00 set_scene R-335 - command=49 room=50 Front_Porch_PIR channel=0 scene=0
+2024-03-15T01:44:20+00:00 set_scene R-268 I command=49 room=06 Study channel=0 scene=0
+2024-03-15T01:44:32+00:00 set_scene R-268 I command=49 room=14 Kitchen channel=0 scene=2
+2024-03-15T01:44:50+00:00 set_scene R-268 I command=49 room=14 Kitchen channel=0 scene=0
+2024-03-15T01:44:50+00:00 set_scene R-268 I command=49 room=15 Kitchen_Lounge channel=0 scene=0
+2024-03-15T01:44:50+00:00 set_scene R-268 I command=49 room=15 Kitchen_Lounge channel=0 scene=0
+2024-03-15T01:44:52+00:00 set_scene R-268 I command=49 room=09 Hall channel=0 scene=0
+2024-03-15T07:17:59+00:00 set_scene R+066 I command=49 room=21 Master_Bed channel=0 scene=1
+2024-03-15T07:40:06+00:00 set_scene R+088 I command=49 room=21 Master_Bed channel=0 scene=0
+2024-03-15T08:45:06+00:00 set_scene R+153 I command=49 room=21 Master_Bed channel=0 scene=1
+2024-03-15T09:06:14+00:00 set_scene R+174 I command=49 room=21 Master_Bed channel=0 scene=0
+2024-03-15T09:14:01+00:00 set_scene R+182 I command=49 room=21 Master_Bed channel=0 scene=1
+2024-03-15T09:14:11+00:00 set_scene R+182 I command=49 room=21 Master_Bed channel=0 scene=0
+2024-03-15T09:30:19+00:00 set_scene R+198 I command=49 room=21 Master_Bed channel=0 scene=1
+2024-03-15T09:33:30+00:00 set_scene R+201 I command=49 room=21 Master_Bed channel=0 scene=0
+2024-03-15T09:35:34+00:00 set_scene R+203 - command=49 room=50 Front_Porch_PIR channel=0 scene=1
+2024-03-15T11:16:04+00:00 set_scene R+304 I command=49 room=06 Study channel=0 scene=1
+2024-03-15T13:38:26+00:00 set_scene S-267 - command=49 room=50 Front_Porch_PIR channel=0 scene=1
+2024-03-15T13:38:56+00:00 set_scene S-266 - command=49 room=50 Front_Porch_PIR channel=0 scene=1
+2024-03-15T13:42:03+00:00 set_scene S-263 - command=49 room=50 Front_Porch_PIR channel=0 scene=0
+2024-03-15T14:13:07+00:00 set_scene S-232 - command=49 room=50 Front_Porch_PIR channel=0 scene=1
+2024-03-15T14:13:14+00:00 set_scene S-232 - command=49 room=50 Front_Porch_PIR channel=0 scene=1
+2024-03-15T14:13:20+00:00 set_scene S-232 - command=49 room=50 Front_Porch_PIR channel=0 scene=1
+2024-03-15T14:16:46+00:00 set_scene S-228 - command=49 room=50 Front_Porch_PIR channel=0 scene=0
+2024-03-15T14:50:26+00:00 set_scene S-195 - command=49 room=50 Front_Porch_PIR channel=0 scene=1
+2024-03-15T14:50:33+00:00 set_scene S-195 - command=49 room=50 Front_Porch_PIR channel=0 scene=1
+2024-03-15T14:50:36+00:00 set_scene S-194 - command=49 room=50 Front_Porch_PIR channel=0 scene=1
+2024-03-15T14:50:39+00:00 set_scene S-194 - command=49 room=50 Front_Porch_PIR channel=0 scene=1
+2024-03-15T14:50:48+00:00 set_scene S-194 - command=49 room=50 Front_Porch_PIR channel=0 scene=1
+2024-03-15T14:51:45+00:00 set_scene S-193 - command=49 room=50 Front_Porch_PIR channel=0 scene=1
+2024-03-15T14:51:58+00:00 set_scene S-193 - command=49 room=50 Front_Porch_PIR channel=0 scene=1
+2024-03-15T14:52:02+00:00 set_scene S-193 - command=49 room=50 Front_Porch_PIR channel=0 scene=1
+2024-03-15T14:52:44+00:00 set_scene S-192 - command=49 room=50 Front_Porch_PIR channel=0 scene=1
+2024-03-15T14:52:46+00:00 set_scene S-192 - command=49 room=50 Front_Porch_PIR channel=0 scene=1
+2024-03-15T14:52:47+00:00 set_scene S-192 - command=49 room=50 Front_Porch_PIR channel=0 scene=1
+2024-03-15T14:53:10+00:00 set_scene S-192 - command=49 room=50 Front_Porch_PIR channel=0 scene=1
+2024-03-15T14:53:26+00:00 set_scene S-192 - command=49 room=50 Front_Porch_PIR channel=0 scene=1
+2024-03-15T14:53:33+00:00 set_scene S-191 - command=49 room=50 Front_Porch_PIR channel=0 scene=1
+2024-03-15T14:53:40+00:00 set_scene S-191 - command=49 room=50 Front_Porch_PIR channel=0 scene=1
+2024-03-15T14:53:51+00:00 set_scene S-191 - command=49 room=50 Front_Porch_PIR channel=0 scene=1
+2024-03-15T14:56:56+00:00 set_scene S-188 - command=49 room=50 Front_Porch_PIR channel=0 scene=0
+2024-03-15T14:57:04+00:00 set_scene S-188 - command=49 room=50 Front_Porch_PIR channel=0 scene=1
+2024-03-15T14:57:06+00:00 set_scene S-188 - command=49 room=50 Front_Porch_PIR channel=0 scene=1
+2024-03-15T14:57:16+00:00 set_scene S-188 - command=49 room=50 Front_Porch_PIR channel=0 scene=1
+2024-03-15T14:57:18+00:00 set_scene S-188 - command=49 room=52 Alarm_Interface channel=0 scene=4
+2024-03-15T14:57:18+00:00 alarm_set
+2024-03-15T14:57:20+00:00 set_scene S-188 - command=49 room=50 Front_Porch_PIR channel=0 scene=1
+2024-03-15T14:57:33+00:00 set_scene S-188 - command=49 room=50 Front_Porch_PIR channel=0 scene=1
+2024-03-15T14:57:39+00:00 set_scene S-187 - command=49 room=50 Front_Porch_PIR channel=0 scene=1
+2024-03-15T14:57:50+00:00 set_scene S-187 - command=49 room=50 Front_Porch_PIR channel=0 scene=1
+2024-03-15T14:58:17+00:00 set_scene S-187 - command=49 room=52 Alarm_Interface channel=0 scene=0
+2024-03-15T14:58:17+00:00 alarm_unset
+2024-03-15T15:00:51+00:00 set_scene S-184 - command=49 room=50 Front_Porch_PIR channel=0 scene=0
+2024-03-15T15:12:56+00:00 set_scene S-172 - command=49 room=50 Front_Porch_PIR channel=0 scene=1
+2024-03-15T15:13:09+00:00 set_scene S-172 - command=49 room=50 Front_Porch_PIR channel=0 scene=1
+2024-03-15T15:13:17+00:00 set_scene S-172 - command=49 room=50 Front_Porch_PIR channel=0 scene=1
+2024-03-15T15:13:31+00:00 set_scene S-172 - command=49 room=50 Front_Porch_PIR channel=0 scene=1
+2024-03-15T15:14:25+00:00 set_scene S-171 - command=49 room=50 Front_Porch_PIR channel=0 scene=1
+2024-03-15T15:14:32+00:00 set_scene S-171 - command=49 room=52 Alarm_Interface channel=0 scene=4
+2024-03-15T15:14:32+00:00 alarm_set
+2024-03-15T15:14:33+00:00 set_scene S-171 - command=49 room=50 Front_Porch_PIR channel=0 scene=1
+2024-03-15T15:14:53+00:00 set_scene S-170 - command=49 room=50 Front_Porch_PIR channel=0 scene=1
+2024-03-15T15:15:11+00:00 set_scene S-170 - command=49 room=50 Front_Porch_PIR channel=0 scene=1
+2024-03-15T15:15:20+00:00 set_scene S-170 - command=49 room=52 Alarm_Interface channel=0 scene=0
+2024-03-15T15:15:20+00:00 alarm_unset
+2024-03-15T15:15:48+00:00 set_scene S-169 - command=49 room=50 Front_Porch_PIR channel=0 scene=1
+2024-03-15T15:15:55+00:00 set_scene S-169 - command=49 room=52 Alarm_Interface channel=0 scene=4
+2024-03-15T15:15:55+00:00 alarm_set
+2024-03-15T15:15:55+00:00 set_scene S-169 - command=49 room=50 Front_Porch_PIR channel=0 scene=1
+2024-03-15T15:16:05+00:00 set_scene S-169 - command=49 room=52 Alarm_Interface channel=0 scene=1
+2024-03-15T15:16:05+00:00 alarm_sounding
+2024-03-15T15:16:16+00:00 set_scene S-169 - command=49 room=50 Front_Porch_PIR channel=0 scene=1
+2024-03-15T15:16:17+00:00 set_scene S-169 I command=49 room=15 Kitchen_Lounge channel=0 scene=1
+2024-03-15T15:16:30+00:00 set_scene S-169 - command=49 room=50 Front_Porch_PIR channel=0 scene=1
+2024-03-15T15:16:44+00:00 set_scene S-168 - command=49 room=52 Alarm_Interface channel=0 scene=0
+2024-03-15T15:16:44+00:00 alarm_resolve
+2024-03-15T15:16:44+00:00 alarm_unset
+2024-03-15T15:17:05+00:00 set_scene S-168 - command=49 room=50 Front_Porch_PIR channel=0 scene=1
+2024-03-15T15:17:15+00:00 set_scene S-168 - command=49 room=50 Front_Porch_PIR channel=0 scene=1
+2024-03-15T15:17:25+00:00 set_scene S-168 - command=49 room=50 Front_Porch_PIR channel=0 scene=1
+2024-03-15T15:17:42+00:00 set_scene S-167 - command=49 room=50 Front_Porch_PIR channel=0 scene=1
+2024-03-15T15:17:59+00:00 set_scene S-167 - command=49 room=50 Front_Porch_PIR channel=0 scene=1
+2024-03-15T15:18:20+00:00 set_scene S-167 - command=49 room=52 Alarm_Interface channel=0 scene=4
+2024-03-15T15:18:20+00:00 alarm_set
+2024-03-15T15:18:26+00:00 set_scene S-167 - command=49 room=50 Front_Porch_PIR channel=0 scene=1
+2024-03-15T15:18:31+00:00 set_scene S-167 - command=49 room=52 Alarm_Interface channel=0 scene=1
+2024-03-15T15:18:31+00:00 alarm_sounding
+2024-03-15T15:18:42+00:00 set_scene S-166 I command=49 room=15 Kitchen_Lounge channel=0 scene=1
+2024-03-15T15:18:42+00:00 set_scene S-166 - command=49 room=52 Alarm_Interface channel=0 scene=0
+2024-03-15T15:18:42+00:00 alarm_resolve
+2024-03-15T15:18:42+00:00 alarm_unset
+2024-03-15T15:19:54+00:00 set_scene S-165 - command=49 room=50 Front_Porch_PIR channel=0 scene=1
+2024-03-15T15:20:05+00:00 set_scene S-165 - command=49 room=50 Front_Porch_PIR channel=0 scene=1
+2024-03-15T15:20:07+00:00 set_scene S-165 - command=49 room=50 Front_Porch_PIR channel=0 scene=1
+2024-03-15T15:20:10+00:00 set_scene S-165 - command=49 room=52 Alarm_Interface channel=0 scene=4
+2024-03-15T15:20:10+00:00 alarm_set
+2024-03-15T15:20:11+00:00 set_scene S-165 - command=49 room=50 Front_Porch_PIR channel=0 scene=1
+2024-03-15T15:20:13+00:00 set_scene S-165 - command=49 room=50 Front_Porch_PIR channel=0 scene=1
+2024-03-15T15:20:18+00:00 set_scene S-165 - command=49 room=50 Front_Porch_PIR channel=0 scene=1
+2024-03-15T15:20:23+00:00 set_scene S-165 - command=49 room=52 Alarm_Interface channel=0 scene=1
+2024-03-15T15:20:23+00:00 alarm_sounding
+2024-03-15T15:20:26+00:00 set_scene S-165 - command=49 room=52 Alarm_Interface channel=0 scene=0
+2024-03-15T15:20:26+00:00 alarm_unset
+2024-03-15T15:29:23+00:00 set_scene S-156 - command=49 room=52 Alarm_Interface channel=0 scene=4
+2024-03-15T15:29:23+00:00 alarm_set
+2024-03-15T15:29:41+00:00 set_scene S-155 I command=49 room=15 Kitchen_Lounge channel=0 scene=0
+2024-03-15T15:30:34+00:00 set_scene S-154 - command=49 room=52 Alarm_Interface channel=0 scene=1
+2024-03-15T15:30:34+00:00 alarm_sounding
+2024-03-15T15:30:40+00:00 set_scene S-154 - command=49 room=52 Alarm_Interface channel=0 scene=0
+2024-03-15T15:30:40+00:00 alarm_resolve
+2024-03-15T15:30:40+00:00 alarm_unset
+2024-03-15T15:31:15+00:00 set_scene S-154 - command=49 room=50 Front_Porch_PIR channel=0 scene=1
+2024-03-15T15:31:31+00:00 set_scene S-154 - command=49 room=50 Front_Porch_PIR channel=0 scene=1
+2024-03-15T15:31:36+00:00 set_scene S-153 - command=49 room=50 Front_Porch_PIR channel=0 scene=1
+2024-03-15T15:32:14+00:00 set_scene S-153 - command=49 room=52 Alarm_Interface channel=0 scene=4
+2024-03-15T15:32:14+00:00 alarm_set
+2024-03-15T15:32:16+00:00 set_scene S-153 - command=49 room=50 Front_Porch_PIR channel=0 scene=1
+2024-03-15T15:32:25+00:00 set_scene S-153 - command=49 room=50 Front_Porch_PIR channel=0 scene=1
+2024-03-15T15:32:27+00:00 set_scene S-153 - command=49 room=52 Alarm_Interface channel=0 scene=1
+2024-03-15T15:32:27+00:00 alarm_sounding
+2024-03-15T15:32:30+00:00 set_scene S-153 - command=49 room=50 Front_Porch_PIR channel=0 scene=1
+2024-03-15T15:32:35+00:00 set_scene S-152 - command=49 room=52 Alarm_Interface channel=0 scene=0
+2024-03-15T15:32:35+00:00 alarm_resolve
+2024-03-15T15:32:35+00:00 alarm_unset
+2024-03-15T15:35:28+00:00 set_scene S-150 - command=49 room=50 Front_Porch_PIR channel=0 scene=0
+2024-03-15T15:43:24+00:00 set_scene S-142 - command=49 room=50 Front_Porch_PIR channel=0 scene=1
+2024-03-15T15:46:31+00:00 set_scene S-139 - command=49 room=50 Front_Porch_PIR channel=0 scene=0
+2024-03-15T15:46:48+00:00 set_scene S-138 - command=49 room=52 Alarm_Interface channel=0 scene=4
+2024-03-15T15:46:48+00:00 alarm_set
+2024-03-15T15:46:50+00:00 set_scene S-138 - command=49 room=50 Front_Porch_PIR channel=0 scene=1
+2024-03-15T15:46:54+00:00 set_scene S-138 - command=49 room=50 Front_Porch_PIR channel=0 scene=1
+2024-03-15T15:47:04+00:00 set_scene S-138 - command=49 room=52 Alarm_Interface channel=0 scene=1
+2024-03-15T15:47:04+00:00 alarm_sounding
+2024-03-15T15:47:07+00:00 set_scene S-138 - command=49 room=52 Alarm_Interface channel=0 scene=0
+2024-03-15T15:47:07+00:00 alarm_unset
+2024-03-15T15:48:46+00:00 set_scene S-136 - command=49 room=50 Front_Porch_PIR channel=0 scene=1
+2024-03-15T15:48:53+00:00 set_scene S-136 - command=49 room=50 Front_Porch_PIR channel=0 scene=1
+2024-03-15T15:48:58+00:00 set_scene S-136 - command=49 room=50 Front_Porch_PIR channel=0 scene=1
+2024-03-15T15:49:13+00:00 set_scene S-136 - command=49 room=52 Alarm_Interface channel=0 scene=0
+2024-03-15T15:49:13+00:00 alarm_unset
+2024-03-15T15:49:51+00:00 set_scene S-135 - command=49 room=52 Alarm_Interface channel=0 scene=4
+2024-03-15T15:49:51+00:00 alarm_set
+2024-03-15T15:50:20+00:00 set_scene S-135 - command=49 room=52 Alarm_Interface channel=0 scene=0
+2024-03-15T15:50:20+00:00 alarm_unset
+2024-03-15T15:52:01+00:00 set_scene S-133 - command=49 room=50 Front_Porch_PIR channel=0 scene=0
+2024-03-15T15:56:58+00:00 set_scene S-128 - command=49 room=50 Front_Porch_PIR channel=0 scene=1
+2024-03-15T16:00:03+00:00 set_scene S-125 - command=49 room=50 Front_Porch_PIR channel=0 scene=0
+2024-03-15T16:56:40+00:00 set_scene S-068 - command=49 room=50 Front_Porch_PIR channel=0 scene=1
+2024-03-15T16:59:47+00:00 set_scene S-065 - command=49 room=50 Front_Porch_PIR channel=0 scene=0
+2024-03-15T18:02:01+00:00 set_scene S-003 - command=49 room=32 Gate_Lights channel=0 scene=1
+2024-03-15T18:02:01+00:00 set_scene S-003 - command=49 room=33 Front_Entrance_Pillars channel=0 scene=1
+2024-03-15T18:36:46+00:00 set_scene S+032 I command=49 room=22 MBed_EnSuite channel=0 scene=3
+2024-03-15T18:37:57+00:00 set_scene S+033 I command=49 room=22 MBed_EnSuite channel=0 scene=0
+2024-03-15T18:38:06+00:00 set_scene S+033 I command=49 room=21 Master_Bed channel=0 scene=0
+2024-03-15T18:38:09+00:00 set_scene S+033 I command=49 room=10 Landing channel=0 scene=3
+2024-03-15T18:38:23+00:00 set_scene S+033 I command=49 room=09 Hall channel=0 scene=3
+2024-03-15T18:38:34+00:00 set_scene S+034 I command=49 room=14 Kitchen channel=0 scene=1
+2024-03-15T18:49:38+00:00 set_scene S+045 - command=49 room=50 Front_Porch_PIR channel=0 scene=0
+2024-03-15T19:06:21+00:00 set_scene S+061 I command=49 room=15 Kitchen_Lounge channel=0 scene=2
+2024-03-15T19:38:32+00:00 set_scene S+093 I command=49 room=21 Master_Bed channel=0 scene=1
+2024-03-15T19:42:48+00:00 set_scene S+098 I command=49 room=14 Kitchen channel=0 scene=0
+2024-03-15T19:42:49+00:00 set_scene S+098 I command=49 room=15 Kitchen_Lounge channel=0 scene=0
+2024-03-15T19:43:09+00:00 set_scene S+098 I command=49 room=14 Kitchen channel=0 scene=2
+2024-03-15T19:43:32+00:00 set_scene S+098 I command=49 room=14 Kitchen channel=0 scene=0
+2024-03-15T19:43:33+00:00 set_scene S+098 I command=49 room=15 Kitchen_Lounge channel=0 scene=0
+2024-03-15T19:43:33+00:00 set_scene S+098 I command=49 room=15 Kitchen_Lounge channel=0 scene=0
+2024-03-15T19:54:32+00:00 set_scene S+109 I command=49 room=21 Master_Bed channel=0 scene=0
+2024-03-15T19:57:52+00:00 set_scene S+113 I command=49 room=14 Kitchen channel=0 scene=2
+2024-03-15T20:13:45+00:00 set_scene S+129 I command=49 room=14 Kitchen channel=0 scene=0
+2024-03-15T20:13:45+00:00 set_scene S+129 I command=49 room=15 Kitchen_Lounge channel=0 scene=0
+2024-03-15T20:13:45+00:00 set_scene S+129 I command=49 room=15 Kitchen_Lounge channel=0 scene=0
+2024-03-15T20:14:35+00:00 set_scene S+130 - command=49 room=50 Front_Porch_PIR channel=0 scene=1
+2024-03-15T20:14:46+00:00 set_scene S+130 - command=49 room=52 Alarm_Interface channel=0 scene=4
+2024-03-15T20:14:46+00:00 alarm_set
+2024-03-15T20:17:50+00:00 set_scene S+133 - command=49 room=50 Front_Porch_PIR channel=0 scene=0
+2024-03-15T22:25:23+00:00 set_scene S+260 - command=49 room=52 Alarm_Interface channel=0 scene=0
+2024-03-15T22:25:23+00:00 alarm_unset
+2024-03-15T22:25:30+00:00 set_scene S+260 I command=49 room=14 Kitchen channel=0 scene=4
+2024-03-15T22:25:31+00:00 set_scene S+260 I command=49 room=14 Kitchen channel=0 scene=1
+2024-03-15T22:47:56+00:00 set_scene S+283 I command=49 room=23 Spa_Bathroom channel=0 scene=3
+2024-03-15T22:47:57+00:00 set_scene S+283 I command=49 room=23 Spa_Bathroom channel=0 scene=4
+2024-03-15T22:47:57+00:00 set_scene S+283 I command=49 room=23 Spa_Bathroom channel=0 scene=0
+2024-03-15T22:49:08+00:00 set_scene S+284 I command=49 room=17 Play_Room channel=0 scene=1
+2024-03-15T22:56:06+00:00 set_scene S+291 I command=49 room=14 Kitchen channel=0 scene=0
+2024-03-15T22:56:07+00:00 set_scene S+291 I command=49 room=15 Kitchen_Lounge channel=0 scene=0
+2024-03-15T22:56:07+00:00 set_scene S+291 I command=49 room=15 Kitchen_Lounge channel=0 scene=0
+2024-03-15T23:14:02+00:00 set_scene S+309 I command=49 room=17 Play_Room channel=0 scene=0
