@@ -106,10 +106,10 @@ def check_alarm_still_set_at_0620():
 
 warn_alarm_unset = False
 last_interactive, _ = Now()
-
+auto_playback_process = None
 
 def check_if_alarm_set():
-    global warn_event_key, warn_alarm_unset, last_interactive
+    global warn_event_key, warn_alarm_unset, last_interactive, alarm_set, auto_playback_process
 
     t, T = Now()
 
@@ -119,6 +119,22 @@ def check_if_alarm_set():
         warn_event_key = warn_event_session.trigger(
             "Alarm unset but house unoccupied", 'Elmhurst')
         warn_alarm_unset = True
+
+    if alarm_set != "unset":
+        print(T, "auto_lights_playback")
+
+        a_ts = datetime.datetime.now().isoformat(timespec='seconds')
+        a_filename = f"playback2-{a_ts}.log"
+
+        with open(a_filename, "w") as a_fd:
+            # Launch background process with redirected output
+            auto_playback_process = subprocess.Popen(
+                ["python3", "/home/ian/house-monitor/rako-playback2.py","/home/ian/house-monitor/rako-playback"],  # command + args
+                stdout=a_fd,
+                stderr=subprocess.STDOUT,
+            )
+            print(T, f"start_process {process.pid} {a_filename}")
+
     return schedule.CancelJob    # run once
 
 
@@ -168,7 +184,7 @@ def listening():
 
     global sunrise, sunset
 
-    global last_interactive, alarm_set
+    global last_interactive, alarm_set, auto_playback_process
 
     # play recorded events if alarm_set == "full" or warn_event_key
 
@@ -290,6 +306,10 @@ def listening():
                             resp = log_session.submit(
                                 "Alarm unset", 'Elmhurst')
                             holdoff = 0
+
+                            if auto_playback_process:
+                                auto_playback_process.terminate()   # kill the auto_playback_process
+                                auto_playback_process = None
 
                         elif val == 1:    # Alarm sounding
                             print(T, "alarm_sounding")

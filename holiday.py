@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 import datetime
 import time
 import socket
@@ -12,6 +13,9 @@ def set_scene( room, channel, scene):
     BRIDGE_IP = "192.168.1.34"
     PORT = 9761
     data = bytearray.fromhex('000000000000000000')
+
+    if scene > 2:
+        scene = 2
 
     data[0] = 0x52
     data[1] = 7
